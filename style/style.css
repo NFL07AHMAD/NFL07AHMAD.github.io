@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+:root {
+	--mainColor: #142636;
+	--accentColor: #0f151d;
+	scroll-behavior: smooth;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+	background: linear-gradient(to right, var(--mainColor), #16202e);
+}
+
+/* navbar top */
+
+nav {
+	background: #0f151d;
+	position: fixed;
+	width: 100vw;
+	height: 55px;
+	display: flex;
+	z-index: 1;
+}
+
+nav .container {
+	position: relative;
+	display: block;
+	width: 100%;
+	max-width: 1366px;
+	margin: auto;
+}
+
+nav .container .brand {
+	display: inline-block;
+	margin-left: 50px;
+	padding: 0 20px;
+	color: #fafafa;
+	line-height: 55px;
+	text-decoration: none;
+	font-style: italic;
+	font-size: 1.5rem;
+	font-weight: bold;
+	font-family: "Ubuntu", sans-serif;
+}
+
+nav ul {
+	list-style: none;
+	float: right;
+	line-height: 55px;
+	margin-right: 50px;
+}
+
+nav ul li {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #bbbbbb;
+	text-transform: uppercase;
+	font-family: "Ubuntu", sans-serif;
+}
+
+nav ul li a:hover {
+	color: #ffffff;
+}
+
+nav .navbar-button {
+	font-size: 1.5rem;
+	color: white;
+	float: right;
+	margin-right: 80px;
+	line-height: 55px;
+	display: none;
+	cursor: pointer;
+}
+
+nav #navbar-checkbtn {
+	display: none;
+}
+
+/* header sect */
+#header {
+	height: 100vh;
+	overflow: hidden;
+}
+
+#header .container {
+	height: 100vh;
+	display: flex;
+}
+
+#header .container .intro {
+	position: relative;
+	display: inline-block;
+	margin: auto;
+	padding: 50px;
+}
+
+#header .container .intro p:nth-child(1) {
+	font-size: 2rem;
+	letter-spacing: 0.3rem;
+	text-transform: uppercase;
+}
+#header .container .intro p:nth-child(2) {
+	font-size: 4.5rem;
+	letter-spacing: 0.5rem;
+}
+
+#header .container .intro p:nth-child(3) {
+	font-size: 2.5rem;
+}
+
+#header .container .intro .typed-text {
+	color: #008cff;
+	text-transform: none;
+	font-size: 3rem;
+	font-family: "Fira Code", monospace;
+}
+
+#header .container .intro .typed-cursor {
+	display: inline-block;
+	width: 3px;
+	background: #ffffff;
+	margin-left: 0.1rem;
+	animation: cursorBlink 1s infinite;
+}
+
+#mid {
+	position: relative;
+	height: 100vh;
+	background: var(--accentColor);
+}
+
+#mid p {
+	position: relative;
+	top: 200px;
+	font-size: 1.5rem;
+	padding: 100px;
+	letter-spacing: 0.2rem;
+	font-family: "Ubuntu", sans-serif;
+}
+
+@keyframes cursorBlink {
+	0% {
+		background: #cccccc;
+	}
+	49% {
+		background: #cccccc;
+	}
+	50% {
+		background: transparent;
+	}
+	99% {
+		background: transparent;
+	}
+	100% {
+		background: #cccccc;
+	}
+}
+
+@media (max-width: 858px) {
+	nav .container .brand {
+		font-size: 20px;
+		margin-left: 20px;
+		padding: 0 20px;
+	}
+
+	nav .navbar-button {
+		display: block;
+		margin-right: 25px;
+	}
+
+	nav ul {
+		position: fixed;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100vh;
+		background: #2c3e50;
+		top: 55px;
+		right: -100%;
+		text-align: center;
+		transition: all 0.5s;
+	}
+
+	nav ul li {
+		display: block;
+		padding: 20px;
+		margin: 0;
+		line-height: 50px;
+	}
+
+	nav ul li a {
+		font-size: 20px;
+		padding: 2rem;
+	}
+
+	nav ul li a:hover {
+		color: #008cff;
+	}
+
+	nav #navbar-checkbtn:checked ~ ul {
+		right: 0%;
+	}
+
+	#header .container .intro p:nth-child(1) {
+		font-size: 1.5rem;
+	}
+
+	#header .container .intro p:nth-child(2) {
+		font-size: 2.5rem;
+	}
+
+	#header .container .intro p:nth-child(3) {
+		font-size: 1.5rem;
+	}
+
+	#header .container .intro .typed-text {
+		font-size: 1.8rem;
+	}
+}
