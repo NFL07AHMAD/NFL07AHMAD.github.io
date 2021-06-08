@@ -40,7 +40,6 @@ window.onload = () => {
 			wScroll / 1.5
 		}px)`;
 	});
-	console.log([wScroll, document.querySelectorAll(".intro p")]);
 
 	type();
 };
