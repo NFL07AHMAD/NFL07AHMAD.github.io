@@ -145,11 +145,29 @@ nav #navbar-checkbtn {
 
 #mid p {
 	position: relative;
-	top: 200px;
+	top: 50px;
 	font-size: 1.5rem;
 	padding: 100px;
 	letter-spacing: 0.2rem;
 	font-family: "Ubuntu", sans-serif;
+}
+
+#contact {
+	position: relative;
+	top: 50%;
+	margin: 10px;
+	bottom: 0;
+}
+
+#contact a {
+	font-size: 3rem;
+	padding: 10px;
+	color: #acacac;
+}
+
+#contact a:hover {
+	text-shadow: 2px 0 20px #ffffff, 2px 0 50px #ffffff, 5px 0 60px #ffffff;
+	color: #d4d4d4;
 }
 
 @keyframes cursorBlink {
@@ -197,14 +215,16 @@ nav #navbar-checkbtn {
 
 	nav ul li {
 		display: block;
-		padding: 20px;
 		margin: 0;
+		border-bottom: #dfdfdf inset 2px;
 		line-height: 50px;
 	}
 
 	nav ul li a {
 		font-size: 20px;
-		padding: 2rem;
+		color: #fff;
+		margin: 0 0 50px;
+		padding: 1.5rem 50%;
 	}
 
 	nav ul li a:hover {
@@ -229,5 +249,9 @@ nav #navbar-checkbtn {
 
 	#header .container .intro .typed-text {
 		font-size: 1.8rem;
+	}
+
+	#mid p {
+		padding: 50px;
 	}
 }
