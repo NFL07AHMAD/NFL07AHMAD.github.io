@@ -4,6 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Hello World!</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Sans+Pro&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="style/style.css" />
 		<script
 			src="https://kit.fontawesome.com/1312b0588d.js"
@@ -13,54 +17,112 @@
 	<body>
 		<nav>
 			<div class="container">
-				<input type="checkbox" id="navbar-checkbtn" />
-				<label for="navbar-checkbtn" class="navbar-button"
-					><i class="fas fa-bars"></i
-				></label>
-				<a class="brand" href="#">Ahmad Naufal</a>
+				<a href="" class="logo"><img src="img/my logo.svg" /></a>
+
 				<ul>
-					<li><a href="#header">Header</a></li>
-					<li><a href="#mid">About</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="">About Me</a></li>
+					<li><a href="" onclick="alert(`Coming soon`)">Portfolio</a></li>
+					<li><a href="">Contact</a></li>
 				</ul>
+
+				<div class="menu-toggle">
+					<input type="checkbox" name="" id="toggler" />
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 			</div>
 		</nav>
-		<section id="header">
+
+		<section id="header" class="header">
 			<div class="container">
-				<div class="intro">
-					<p>My Name</p>
-					<p>Ahmad Naufal F.</p>
-					<p>
-						I'm a <span class="typed-text"></span
-						><span class="typed-cursor">&NonBreakingSpace;</span>
-					</p>
+				<div class="col">
+					<h1>Hi!, I'm Ahmad</h1>
+					<div class="shape"></div>
+					<p>I'm Designer</p>
+				</div>
+				<div class="col">
+					<div class="shape"></div>
 				</div>
 			</div>
 		</section>
-		<section id="mid">
+		<section id="about" class="about">
 			<div class="container">
+				<h2>About Me</h2>
 				<p>
-					Hello, I'm Ahmad. I live in Indonesia and I'm student in junior high
-					school
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+					quis, voluptates natus porro minima ratione tempora mollitia odit
+					error quibusdam autem nesciunt obcaecati repudiandae quas quae nisi
+					assumenda minus doloremque enim maxime! Consequuntur, iusto quaerat?
 				</p>
 			</div>
 		</section>
-		<div id="contact">
-			<a
-				href="https://www.facebook.com/profile.php?id=100018105980925"
-				target="_blank"
-				><i class="fab fa-facebook"></i
-			></a>
-			<a href="https://www.instagram.com/naufal_07ahmad/" target="_blank"
-				><i class="fab fa-instagram"></i
-			></a>
-			<a href="https://github.com/NFL07AHMAD" target="_blank"
-				><i class="fab fa-github"></i
-			></a>
-			<a href="mailto:nownaufal07@gmail.com" target="_blank"
-				><i class="fas fa-envelope"></i
-			></a>
-		</div>
+		<section class="skills">
+			<div class="container">
+				<h2>My Skills</h2>
+				<div class="col">
+					<div class="item">
+						<i class="fab fa-html5"></i>
+						<h4>HTML5</h4>
+						<div class="progress-border">
+							<div class="progress-bar"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="item">
+						<i class="fab fa-css3"></i>
+						<h4>CSS3</h4>
+						<div class="progress-border">
+							<div class="progress-bar"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="item">
+						<i class="fab fa-js"></i>
+						<h4>Javascript</h4>
+						<div class="progress-border">
+							<div class="progress-bar"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="item">
+						<i class="fab fa-figma"></i>
+						<h4>Figma</h4>
+						<div class="progress-border">
+							<div class="progress-bar"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="contact" class="contact">
+			<div class="container">
+				<h2>Contact Me</h2>
+				<div class="col">
+					<p>My Email</p>
+					<a href="mailto:nownaufal07@gmail.com" class="email"
+						>nownaufal07@gmail.com</a
+					>
+				</div>
+				<div class="col">
+					<p>My Social Media</p>
+					<ul>
+						<li>
+							<a href=""><i class="fab fa-github"></i></a>
+						</li>
+						<li>
+							<a href=""><i class="fab fa-facebook"></i></a>
+						</li>
+						<li>
+							<a href=""><i class="fab fa-instagram"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 		<script src="script/main.js"></script>
 	</body>
 </html>

@@ -1,45 +1,30 @@
-window.onload = () => {
-	const typedTextSpan = document.querySelector(".typed-text"),
-		textArray = ["student", "developer", "designer"];
+const header = document.querySelector(".header"),
+	nav = document.querySelector("nav"),
+	logo = document.querySelector(".logo")[0],
+	navLinks = document.querySelector("nav ul"),
+	hamburgerMenu = document.querySelector(".slide");
 
-	let textArrayIndex = 0,
-		charIndex = 0,
-		wScroll = 0;
-
-	function type() {
-		if (charIndex < textArray[textArrayIndex].length) {
-			typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-			charIndex++;
-			setTimeout(type, 200);
-		} else {
-			setTimeout(typeErase, 1000);
-		}
+function changeNavColor() {
+	let y = window.scrollY;
+	if (y >= 50) {
+		document.querySelector("nav").style.backgroundColor =
+			"var(--secondary-color)";
+		document.querySelector("nav").style.height = "72px";
+		document.querySelector(".logo").style.height = "72px";
+		document.querySelector(".logo").style.width = "75px";
+	} else {
+		document.querySelector("nav").style.backgroundColor =
+			"var(--primary-color)";
+		document.querySelector("nav").style.height = "54px";
+		document.querySelector(".logo").style.height = "54px";
+		document.querySelector(".logo").style.width = "60px";
 	}
+}
 
-	function typeErase() {
-		if (charIndex > 0) {
-			typedTextSpan.textContent = textArray[textArrayIndex].substring(
-				0,
-				charIndex - 1
-			);
+document.querySelector(".menu-toggle").addEventListener("click", () => {
+	document.querySelector("nav ul").classList.toggle("slide");
+});
 
-			charIndex--;
-			setTimeout(typeErase, 100);
-		} else {
-			textArrayIndex++;
-			if (textArrayIndex >= textArray.length) {
-				textArrayIndex = 0;
-			}
-			setTimeout(type, 500);
-		}
-	}
-
-	window.addEventListener("scroll", () => {
-		wScroll = window.scrollY;
-		document.querySelector(".intro").style.transform = `translate(0px, ${
-			wScroll / 1.5
-		}px)`;
-	});
-
-	type();
-};
+document.addEventListener("scroll", () => {
+	changeNavColor();
+});
