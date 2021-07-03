@@ -29,8 +29,8 @@ nav {
 
 nav .container {
 	display: flex;
-	justify-content: space-between;
 	height: 100%;
+	justify-content: space-between;
 	align-items: center;
 	margin: 0 auto;
 	font-family: "Montserrat", sans-serif;
@@ -135,7 +135,7 @@ nav ul li a:hover {
 
 .header .container {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	max-width: var(--container-max-width);
 	height: 100vh;
 	margin: 0 auto;
@@ -180,7 +180,6 @@ nav ul li a:hover {
 	height: 368px;
 	border-radius: 100%;
 	background-color: #c4c4c4;
-	display: inline-block;
 }
 
 /* About */
@@ -370,13 +369,13 @@ nav ul li a:hover {
 	}
 
 	.contact .container {
-		grid-template-columns: repeat(1, minmax(400px, 1fr));
+		grid-template-columns: repeat(1, minmax(200px, 1fr));
 		padding: 50px;
 	}
 
 	.contact h2 {
 		text-align: center;
-		grid-column-start: 1;
+		grid-column-start: inherit;
 	}
 }
 
@@ -401,12 +400,18 @@ nav ul li a:hover {
 		background: var(--secondary-color);
 		transform: translate(100%, 0);
 		opacity: 0.5;
+		display: none;
 	}
 
 	nav ul.slide {
 		display: flex;
 		transform: translate(0, 0) scale(1);
 		opacity: 1;
+	}
+
+	.header .col:nth-child(2) .shape {
+		width: 204px;
+		height: 204px;
 	}
 
 	.contact p {
