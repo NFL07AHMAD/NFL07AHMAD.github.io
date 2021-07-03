@@ -65,6 +65,7 @@ nav ul {
 	justify-content: space-between;
 	width: 30%;
 	transition: all 0.5s;
+	margin-right: 20px;
 }
 
 nav ul li a {
@@ -138,6 +139,7 @@ nav ul li a:hover {
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	max-width: var(--container-max-width);
 	height: 100vh;
+	padding: 0 50px;
 	margin: 0 auto;
 }
 
@@ -193,7 +195,7 @@ nav ul li a:hover {
 	max-width: var(--container-max-width);
 	margin: 0 auto;
 	height: 100%;
-	padding: 20px;
+	padding: 50px;
 }
 
 .about h2 {
@@ -218,7 +220,7 @@ nav ul li a:hover {
 	align-items: center;
 	max-width: var(--container-max-width);
 	margin: 0 auto;
-	padding: 50px 0;
+	padding: 50px;
 }
 
 .skills .col {
@@ -256,7 +258,7 @@ nav ul li a:hover {
 
 .skills .progress-border {
 	width: 100%;
-	height: 20px;
+	height: 15px;
 	background: #585b61;
 	border-radius: 100px;
 	margin-top: 10px;
@@ -288,7 +290,7 @@ nav ul li a:hover {
 }
 
 .contact .email {
-	font-size: 36px;
+	font-size: 24px;
 }
 
 .contact .container {
@@ -298,6 +300,7 @@ nav ul li a:hover {
 	justify-content: space-between;
 	align-items: center;
 	margin: 0 auto;
+	padding: 0 50px;
 	height: 80vh;
 }
 
@@ -322,7 +325,7 @@ nav ul li a:hover {
 }
 
 .contact ul li a {
-	font-size: 50px;
+	font-size: 40px;
 	padding: 0 10px;
 	background: linear-gradient(90deg, #009ddc 47%, #00dccf 100%);
 	-webkit-background-clip: text;
@@ -332,10 +335,6 @@ nav ul li a:hover {
 @media (max-width: 768px) {
 	nav ul {
 		width: 50%;
-	}
-
-	.header .col:nth-child(1) {
-		padding: 50px;
 	}
 
 	.header .col:nth-child(2) {
@@ -354,7 +353,7 @@ nav ul li a:hover {
 	}
 
 	.skills .col {
-		padding: 0 100px;
+		padding: 0 50px;
 	}
 
 	.skills .item {
@@ -379,7 +378,7 @@ nav ul li a:hover {
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 572px) {
 	.menu-toggle {
 		display: flex;
 		right: 20px;
@@ -409,9 +408,16 @@ nav ul li a:hover {
 		opacity: 1;
 	}
 
-	.header .col:nth-child(2) .shape {
-		width: 204px;
-		height: 204px;
+	.about h2 {
+		font-size: 40px;
+	}
+
+	.skills h2 {
+		font-size: 40px;
+	}
+
+	.contact h2 {
+		font-size: 40px;
 	}
 
 	.contact p {
@@ -419,10 +425,16 @@ nav ul li a:hover {
 	}
 
 	.contact .email {
-		font-size: 24px;
+		font-size: 16px;
 	}
 
 	.contact ul li a {
 		font-size: 30px;
+	}
+}
+
+@media (max-width: 480px) {
+	* .container {
+		padding: 20px;
 	}
 }
