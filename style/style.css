@@ -4,6 +4,7 @@
 	--primary-color: #1e2024;
 	--secondary-color: #1a1c21;
 	--accent-color: #009ddc;
+	scroll-behavior: smooth;
 }
 
 * {
