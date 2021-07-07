@@ -185,6 +185,20 @@ nav ul li a:hover {
 	background-color: #c4c4c4;
 }
 
+.header .col:nth-child(1) .cursor {
+	display: inline-block;
+	width: 3px;
+	background: #009ddc;
+	margin-left: 2px;
+	animation: cursorBlink 1s infinite;
+}
+
+@keyframes cursorBlink {
+	50% {
+		background: transparent;
+	}
+}
+
 /* About */
 
 .about {
