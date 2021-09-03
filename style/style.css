@@ -165,7 +165,7 @@ nav ul li a:hover {
 	padding: 10px 0;
 }
 
-.header .col:nth-child(1) .shape {
+.title-border {
 	border: #009ddc 1px solid;
 	width: 204px;
 	height: 6px;
@@ -203,12 +203,11 @@ nav ul li a:hover {
 
 .about {
 	background: var(--secondary-color);
-}
-
-.about .container {
-	max-width: var(--container-max-width);
-	margin: 0 auto;
-	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
 	padding: 50px;
 }
 
@@ -224,17 +223,32 @@ nav ul li a:hover {
 	color: #dddddd;
 	font-size: 24px;
 	text-align: center;
+	padding: 0 0 50px 0;
+	max-width: var(--container-max-width);
+}
+
+.skills {
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.skills .title-border {
+	width: 40%;
+	margin-bottom: 50px;
 }
 
 .skills .container {
-	display: grid;
-	gap: 5rem;
-	grid-template-columns: repeat(4, minmax(100px, max-content));
+	display: flex;
+	gap: 50px;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 	max-width: var(--container-max-width);
 	margin: 0 auto;
-	padding: 50px;
 	color: #dddddd;
 }
 
@@ -251,6 +265,8 @@ nav ul li a:hover {
 	text-align: center;
 	font-size: var(--h2-font-size);
 	font-family: "Montserrat", sans-serif;
+	margin-bottom: 10px;
+	overflow: hidden;
 }
 
 .skills i {
@@ -295,7 +311,7 @@ nav ul li a:hover {
 	height: 80vh;
 }
 
-.contact .col:nth-child(3) {
+.contact .col:nth-child(2) {
 	text-align: end;
 	display: flex;
 	flex-direction: column;
@@ -354,10 +370,6 @@ nav ul li a:hover {
 		align-items: center;
 	}
 
-	.skills h2 {
-		grid-column: 1 / span 2;
-	}
-
 	.contact .container {
 		grid-template-columns: repeat(1, minmax(200px, 1fr));
 		padding: 50px;
@@ -366,6 +378,10 @@ nav ul li a:hover {
 	.contact h2 {
 		text-align: center;
 		grid-column-start: inherit;
+	}
+
+	.contact .col:nth-child(2) {
+		justify-self: self-start;
 	}
 }
 
@@ -411,6 +427,10 @@ nav ul li a:hover {
 		font-size: 3rem;
 	}
 
+	.skills .title-border {
+		width: 95%;
+	}
+
 	.contact h2 {
 		font-size: 40px;
 	}
@@ -425,6 +445,13 @@ nav ul li a:hover {
 
 	.contact ul li a {
 		font-size: 30px;
+	}
+
+	.contact .col:nth-child(2) {
+		text-align: start;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
 	}
 }
 
