@@ -3,15 +3,15 @@ function changeNavColor() {
 	if (y >= 50) {
 		document.querySelector("nav").style.backgroundColor =
 			"var(--secondary-color)";
-		document.querySelector("nav").style.height = "72px";
-		document.querySelector(".logo").style.height = "72px";
-		document.querySelector(".logo").style.width = "75px";
-	} else {
-		document.querySelector("nav").style.backgroundColor =
-			"var(--primary-color)";
 		document.querySelector("nav").style.height = "54px";
 		document.querySelector(".logo").style.height = "54px";
 		document.querySelector(".logo").style.width = "60px";
+	} else {
+		document.querySelector("nav").style.backgroundColor =
+			"var(--primary-color)";
+		document.querySelector("nav").style.height = "72px";
+		document.querySelector(".logo").style.height = "72px";
+		document.querySelector(".logo").style.width = "75px";
 	}
 }
 
@@ -22,9 +22,8 @@ function typeWriter() {
 
 	function typing() {
 		if (charIndex < words[wordIndex].length) {
-			document.querySelector(".type").textContent += words[wordIndex].charAt(
-				charIndex
-			);
+			document.querySelector(".type").textContent +=
+				words[wordIndex].charAt(charIndex);
 			charIndex++;
 			document.querySelector(".cursor").style.animation = "none";
 			setTimeout(typing, 200);
