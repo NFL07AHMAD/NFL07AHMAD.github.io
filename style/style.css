@@ -1,10 +1,10 @@
 :root {
 	--container-max-width: 1150px;
 	--h2-font-size: 50px;
-	--primary-color: #1e2024;
-	--secondary-color: #1a1c21;
-	--accent-color: #009ddc;
-	--gradient-color: linear-gradient(90deg, #009ddc 47%, #00dccf 100%);
+	--primary-color: #111111;
+	--secondary-color: #141414;
+	--accent-color: #8070C5;
+	--gradient-color: linear-gradient(90deg, #8070C5 47%, #8D86C9 100%);
 	scroll-behavior: smooth;
 }
 
@@ -59,25 +59,35 @@ nav .logo {
 }
 
 nav .logo img {
-	width: 50px;
+	width: 80%;
+	filter: brightness(15%);
 }
 
 nav ul {
 	display: flex;
 	list-style: none;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	width: 30%;
 	transition: all 0.5s;
-	margin-right: 20px;
+}
+
+nav ul li {
+	margin: 5px;
 }
 
 nav ul li a {
-	padding: 10px;
+	padding: 10px 20px;
 	display: inline-block;
+	background-size: 100% 0%;
+	background-repeat: no-repeat;
+	background-position: left;
+	background-image: linear-gradient(to top, #8070c5, #8070c5ac, #8070c500);
+	background-position: bottom;
+	transition: 0.5s;
 }
 
 nav ul li a:hover {
-	color: var(--accent-color);
+	background-size: 100% 100%;
 }
 
 /* Hamburger Menu */
@@ -184,13 +194,13 @@ nav ul li a:hover {
 	width: 368px;
 	height: 368px;
 	border-radius: 100%;
-	background-color: #c4c4c4;
+	background-color: #272829;
 }
 
 .header .col:nth-child(1) .cursor {
 	display: inline-block;
 	width: 3px;
-	background: #009ddc;
+	background: var(--accent-color);
 	margin-left: 2px;
 	animation: cursorBlink 1s infinite;
 }
@@ -302,14 +312,15 @@ nav ul li a:hover {
 	font-size: 24px;
 	text-decoration: none;
 	background-image: var(--gradient-color);
-	background-size: 0% 3px;
+	background-size: 0% 1.5px;
 	background-repeat: no-repeat;
 	background-position: left bottom;
 	transition: 0.5s;
+	padding-bottom: 1px;
 }
 
 .contact .email:hover {
-	background-size: 100% 3px;
+	background-size: 100% 1.5px;
 }
 
 .contact .container {
@@ -345,22 +356,19 @@ nav ul li a:hover {
 
 .contact ul li a {
 	font-size: 40px;
-	padding: 0 5px 5px 5px;
+	padding: 5px 8px;
 	margin: 0 5px;
-	background-size: 100% 0px;
+	background-size: 0% 100%;
 	background-repeat: no-repeat;
-	background-position: top;
-	background-image: var(--gradient-color);
-	-webkit-text-stroke: 1px var(--accent-color);
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
+	background-position: left;
+	background-image: linear-gradient(to left, var(--accent-color), var(--accent-color));
+	text-shadow: -1px 0 var(--accent-color), 0 1px var(--accent-color), 1px 0 var(--accent-color), 0 -1px var(--accent-color);
+	color: var(--secondary-color);
 	transition: 0.5s;
 }
 
 .contact ul li a:hover {
 	background-size: 100% 100%;
-	background-position: top;
-	-webkit-text-stroke: 0px var(--accent-color);
 }
 
 @media (max-width: 768px) {
