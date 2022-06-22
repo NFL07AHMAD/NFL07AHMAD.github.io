@@ -23,11 +23,12 @@ body {
 /* Navbar */
 
 nav {
-	background: var(--primary-color);
+	background: var(--secondary-color);
 	width: 100%;
 	position: fixed;
 	transition: all 0.2s;
 	height: 75px;
+	z-index: 3;
 }
 
 nav .container {
@@ -66,8 +67,8 @@ nav .logo img {
 nav ul {
 	display: flex;
 	list-style: none;
-	/* justify-content: space-between; */
-	width: 30%;
+	justify-content: space-between;
+	width: 35%;
 	transition: all 0.5s;
 }
 
@@ -76,18 +77,19 @@ nav ul li {
 }
 
 nav ul li a {
-	padding: 10px 20px;
+	padding: 20px 10px;
 	display: inline-block;
 	background-size: 100% 0%;
 	background-repeat: no-repeat;
 	background-position: left;
-	background-image: linear-gradient(to top, #8070c5, #8070c5ac, #8070c500);
+	background-image: linear-gradient(to top, #8070c5, #8070c5);
 	background-position: bottom;
 	transition: 0.5s;
 }
 
 nav ul li a:hover {
 	background-size: 100% 100%;
+	color: var(--primary-color);
 }
 
 /* Hamburger Menu */
@@ -362,13 +364,13 @@ nav ul li a:hover {
 	background-repeat: no-repeat;
 	background-position: left;
 	background-image: linear-gradient(to left, var(--accent-color), var(--accent-color));
-	text-shadow: -1px 0 var(--accent-color), 0 1px var(--accent-color), 1px 0 var(--accent-color), 0 -1px var(--accent-color);
-	color: var(--secondary-color);
+	color: #d9d9d9;
 	transition: 0.5s;
 }
 
 .contact ul li a:hover {
 	background-size: 100% 100%;
+	color: var(--secondary-color);
 }
 
 @media (max-width: 768px) {
@@ -499,4 +501,16 @@ nav ul li a:hover {
 	nav .container {
 		padding: inherit;
 	}
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
 }
