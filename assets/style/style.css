@@ -1,11 +1,16 @@
 :root {
 	--container-max-width: 1150px;
 	--h2-font-size: 50px;
-	--primary-color: #111111;
+	--primary-color: #0a0a10;
 	--secondary-color: #141414;
-	--accent-color: #8070C5;
+	--accent-color: #00c4f0;
 	--gradient-color: linear-gradient(90deg, #8070C5 47%, #8D86C9 100%);
 	scroll-behavior: smooth;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('Montserrat-VariableFont_wght.ttf')
 }
 
 * {
@@ -16,7 +21,7 @@
 
 body {
 	background: var(--primary-color);
-	font-family: sans-serif;
+	font-family: 'Montserrat Thin';
 	overflow-x: hidden;
 }
 
@@ -37,7 +42,7 @@ nav .container {
 	justify-content: space-between;
 	align-items: center;
 	margin: 0 auto;
-	font-family: "Montserrat", sans-serif;
+	font-family: "Montserrat Light", sans-serif;
 	max-width: var(--container-max-width);
 }
 
@@ -52,7 +57,6 @@ nav .logo {
 	text-align: center;
 	justify-content: center;
 	font-size: 24px;
-	background: var(--accent-color);
 	width: 75px;
 	height: 75px;
 	padding: 5px;
@@ -61,7 +65,7 @@ nav .logo {
 
 nav .logo img {
 	width: 80%;
-	filter: brightness(15%);
+	filter: brightness(95%);
 }
 
 nav ul {
@@ -82,7 +86,7 @@ nav ul li a {
 	background-size: 100% 0%;
 	background-repeat: no-repeat;
 	background-position: left;
-	background-image: linear-gradient(to top, #8070c5, #8070c5);
+	background-image: linear-gradient(to top, var(--accent-color), var(--accent-color));
 	background-position: bottom;
 	transition: 0.5s;
 }
@@ -167,7 +171,7 @@ nav ul li a:hover {
 .header .col:nth-child(1) h1 {
 	font-size: 64px;
 	font-weight: 100;
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: "Montserrat Light", sans-serif;
 	letter-spacing: 2px;
 	padding: 10px 0;
 	color: #ffffff;
@@ -183,7 +187,7 @@ nav ul li a:hover {
 	border: var(--accent-color) 1px solid;
 	width: 204px;
 	height: 6px;
-	background: var(--gradient-color);
+	background: var(--accent-color);
 }
 
 .header .col:nth-child(2) {
