@@ -5,16 +5,11 @@ let icon3 = document.querySelectorAll('.contact ul li a')[2];
 function changeNavStyle() {
   let y = window.scrollY;
   if (y >= 50) {
-    document.querySelector('nav').style.backgroundColor =
-      'var(--secondary-color)';
-    document.querySelector('nav').style.height = '54px';
-    document.querySelector('nav').style.boxShadow =
-      '0px 10px 26px -6px rgba(0,0,0,0.56)';
+    document.querySelector('nav').style.height = '80px';
     document.querySelector('.logo').style.height = '54px';
     document.querySelector('.logo').style.width = '60px';
   } else {
-    document.querySelector('nav').style.boxShadow = 'inherit';
-    document.querySelector('nav').style.height = '72px';
+    document.querySelector('nav').style.height = '100px';
     document.querySelector('.logo').style.height = '72px';
     document.querySelector('.logo').style.width = '75px';
   }
