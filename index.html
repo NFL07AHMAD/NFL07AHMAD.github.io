@@ -1,114 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Hello World!</title>
-		<link rel="stylesheet" href="assets/style/style.css" />
-		<script
-			src="https://kit.fontawesome.com/1312b0588d.js"
-			crossorigin="anonymous"
-		></script>
-		<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-	</head>
-	<body>
-		<nav>
-			<div class="container">
-				<a href="#header" class="logo"><img src="assets/img/my-logo.svg"/></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/brands.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="#header" class="logo"
+          ><svg
+            xmlns:svg="http://www.w3.org/2000/svg"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 750 750"
+            version="1.1"
+            id=""
+          >
+            <defs id="defs2" />
+            <g id="layer1">
+              <path
+                d="M 25.818882,669.20175 240.46666,76.223532 478.96432,669.20175 H 419.3399 L 240.46666,247.87526 97.368126,669.20175 v 0"
+                id="path31"
+                fill="currentcolor"
+              />
+              <path
+                d="m 130.19156,670.76213 115.03765,-342.98297 34.39584,79.375 -81.78215,263.60797 z"
+                id="path37"
+                fill="currentcolor"
+              />
+              <path
+                d="M 727.67293,77.78391 513.02495,670.76213 274.52729,77.78391 h 59.62442 L 513.02495,499.1104 656.1235,77.78391 v 0"
+                id="path843"
+                fill="currentcolor"
+              />
+              <path
+                d="M 623.30005,76.22353 508.2624,419.2065 473.86656,339.8315 555.64871,76.22353 Z"
+                id="path845"
+                fill="currentcolor"
+              />
+            </g>
+          </svg>
+        </a>
 
-				<ul>
-					<li><a href="#about" >About Me</a></li>
-					<li><a href="" onclick="alert(`Coming soon!! :D`)">Project</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="" onclick="alert(`Coming soon!! :D`)">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
 
-				<div class="menu-toggle">
-					<input type="checkbox" name="" id="toggler" />
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</div>
-		</nav>
+        <div class="menu-toggle">
+          <input type="checkbox" name="" id="toggler" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
 
-		<header id="header" class="header">
-			<div class="container">
-				<div class="col">
-					<h1>Hi!, I'm Ahmad</h1>
-					<div class="title-border"></div>
-					<p>
-						I'm <span class="type"></span><span class="cursor">&nbsp;</span>
-					</p>
-				</div>
-				<div class="col">
-					<div class="shape"><img src="assets/img/PP.png" alt=""></div>
-				</div>
-			</div>
-		</header>
-		<section id="about" class="about">
-			<h2 class="reveal">About Me</h2>
-			<p class="reveal">
-				My name Ahmad Naufal Febriansyah. I live in Indonesia. I like graphics
-				designing and programming. I love graphics designing and programming
-				since I was in middle high school.
-			</p>
-		</section>
-		<section class="skills">
-			<h2 class="reveal">My Skills and Tools</h2>
-			<div class="title-border reveal"></div>
-			<div class="container reveal">
-				<div class="col">
-					<i class="fab fa-html5"></i>
-					<h4>HTML5</h4>
-				</div>
-				<div class="col">
-					<i class="fab fa-css3"></i>
-					<h4>CSS3</h4>
-				</div>
-				<div class="col">
-					<i class="fab fa-js"></i>
-					<h4>Javascript</h4>
-				</div>
-				<div class="col">
-					<i class="fab fa-python"></i>
-					<h4>Python</h4>
-				</div>
-				<div class="col">
-					<i class="fab fa-figma"></i>
-					<h4>Figma</h4>
-				</div>
-			</div>
-		</section>
-		<section id="contact" class="contact">
-			<div class="container">
-				<div class="col reveal">
-					<p>My Email</p>
-					<a href="mailto:nownaufal07@gmail.com" class="email"
-						>nownaufal07@gmail.com</a
-					>
-				</div>
-				<div class="col">
-					<p class="reveal">My Social Media</p>
-					<ul class="reveal">
-						<li>
-							<a target="_blank" href="https://github.com/NFL07AHMAD" aria-label="github"
-								><i class="fab fa-github"></i
-							></a>
-						</li>
-						<li>
-							<a target="_blank" href="https://www.facebook.com/profile.php?id=100018105980925" aria-label="facebook"
-								><i class="fab fa-facebook"></i
-							></a>
-						</li>
-						<li>
-							<a target="_blank" href="https://www.instagram.com/naufal_07ahmad/" aria-label="instagram"
-								><i class="fab fa-instagram"></i
-							></a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-		<script src="script/main.js"></script>
-	</body>
+    <header id="header" class="header">
+      <div class="container">
+        <div class="col">
+          <h1>Hi!, I'm Ahmad</h1>
+          <p>
+            I'm a <span class="type"></span><span class="cursor">&nbsp;</span>
+          </p>
+        </div>
+        <div class="col">
+          <div class="shape"><img src="assets/img/PP.png" alt="" /></div>
+        </div>
+      </div>
+    </header>
+    <section id="about" class="about">
+      <h2 class="reveal">About Me</h2>
+      <p class="reveal">
+        My name Ahmad Naufal Febriansyah. I live in Indonesia. I like graphics
+        designing and programming. I love graphics designing and programming
+        since I was in middle high school.
+      </p>
+    </section>
+    <section class="skills">
+      <h2 class="reveal">My Skills and Tools</h2>
+      <div class="title-border reveal"></div>
+      <div class="container reveal">
+        <div class="col">
+          <i class="fab fa-html5"></i>
+          <p>HTML5</p>
+        </div>
+        <div class="col">
+          <i class="fab fa-css3"></i>
+          <p>CSS3</p>
+        </div>
+        <div class="col">
+          <i class="fab fa-js"></i>
+          <p>Javascript</p>
+        </div>
+        <div class="col">
+          <i class="fab fa-python"></i>
+          <p>Python</p>
+        </div>
+        <div class="col">
+          <i class="fab fa-figma"></i>
+          <p>Figma</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="col reveal">
+          <h3>My Email</h3>
+          <a href="mailto:nownaufal07@gmail.com" class="email"
+            >nownaufal07@gmail.com</a
+          >
+        </div>
+        <div class="col">
+          <h3 class="reveal">My Social Media</h3>
+          <ul class="reveal">
+            <li>
+              <a
+                target="_blank"
+                href="https://github.com/NFL07AHMAD"
+                aria-label="github"
+                ><i class="fa-brands fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/profile.php?id=100018105980925"
+                aria-label="facebook"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/naufal_07ahmad/"
+                aria-label="instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script src="script/main.js"></script>
+  </body>
 </html>

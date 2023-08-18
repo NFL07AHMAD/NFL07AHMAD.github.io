@@ -2,6 +2,7 @@ let icon1 = document.querySelectorAll('.contact ul li a')[0];
 let icon2 = document.querySelectorAll('.contact ul li a')[1];
 let icon3 = document.querySelectorAll('.contact ul li a')[2];
 
+//Function for changing navbar style when scrolling
 function changeNavStyle() {
   let y = window.scrollY;
   if (y >= 50) {
@@ -15,6 +16,7 @@ function changeNavStyle() {
   }
 }
 
+//Function for writing animation in Heading
 function typeWriter() {
   const words = ['Designer', 'Developer', 'Programmer', 'Freelancer'];
   let wordIndex = 0,

@@ -1,16 +1,40 @@
 :root {
-	--container-max-width: 1150px;
+	--container-max-width: 1550px;
 	--h2-font-size: 50px;
 	--primary-color: #0a0a10;
-	--secondary-color: #141414;
+	--font-color: #d8daed;
+	--icon-color: #c0c2d2;
 	--accent-color: #00c4f0;
-	--gradient-color: linear-gradient(90deg, #8070C5 47%, #8D86C9 100%);
-	scroll-behavior: smooth;
 }
 
 @font-face {
-	font-family: 'Montserrat';
-	src: url('Montserrat-VariableFont_wght.ttf')
+	font-family: 'Montserrat-ExtraLight';
+	src: url('../fonts/Montserrat-ExtraLight.ttf')
+}
+
+@font-face {
+	font-family: 'Montserrat-Thin';
+	src: url('../fonts/Montserrat-Thin.ttf');
+}
+
+@font-face {
+	font-family: 'Montserrat-Medium';
+	src: url('../fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'Montserrat-Regular';
+	src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Montserrat-Light';
+	src: url('../fonts/Montserrat-Light.ttf');
+}
+
+@font-face {
+	font-family: 'Ubuntu-Mono';
+	src: url('../fonts/UbuntuMono-Regular.ttf');
 }
 
 * {
@@ -21,19 +45,39 @@
 
 body {
 	background: var(--primary-color);
-	font-family: 'Montserrat Thin';
 	overflow-x: hidden;
+}
+
+h1 {
+	font-family: 'Montserrat-Medium', sans-serif;
+}
+
+h2 {
+	font-family: 'Montserrat-Regular', sans-serif;
+}
+
+h3 {
+	font-family: 'Montserrat-Regular', sans-serif;
+}
+
+p {
+	font-family: 'Montserrat-Light', sans-serif;
+}
+
+a {
+	font-family: 'Montserrat-Light', sans-serif;
 }
 
 /* Navbar */
 
 nav {
-	background: var(--primary-color);
+	background: #0a0a10bd;
 	width: 100%;
 	position: fixed;
 	transition: all 0.2s;
 	height: 100px;
 	z-index: 3;
+	backdrop-filter: blur(8px);
 }
 
 nav .container {
@@ -42,13 +86,13 @@ nav .container {
 	justify-content: space-between;
 	align-items: center;
 	margin: 0 auto;
-	font-family: "Montserrat Light", sans-serif;
 	max-width: var(--container-max-width);
 }
 
 nav a {
 	color: #d9d9d9;
 	text-decoration: none;
+	font-size: 1.05rem;
 }
 
 nav .logo {
@@ -63,9 +107,9 @@ nav .logo {
 	transition: 0.2s;
 }
 
-nav .logo img {
+nav .logo svg {
 	width: 80%;
-	filter: brightness(95%);
+	color: var(--font-color);
 }
 
 nav ul {
@@ -169,25 +213,21 @@ nav ul li a:hover {
 }
 
 .header .col:nth-child(1) h1 {
-	font-size: 64px;
+	font-size: 5rem;
 	font-weight: 100;
-	font-family: "Montserrat Light", sans-serif;
 	letter-spacing: 2px;
 	padding: 10px 0;
-	color: #ffffff;
+	color: var(--font-color);
 }
 
 .header .col:nth-child(1) p {
-	font-size: 32px;
-	color: #bdbdbd;
+	font-size: 1.8rem;
+	color: #9b9ca9;
 	padding: 10px 0;
 }
 
-.title-border {
-	border: var(--accent-color) 1px solid;
-	width: 204px;
-	height: 6px;
-	background: var(--accent-color);
+.header .col:nth-child(1) p span {
+	font-family: monospace;
 }
 
 .header .col:nth-child(2) {
@@ -239,12 +279,11 @@ nav ul li a:hover {
 	padding: 50px 0;
 	text-align: center;
 	font-size: var(--h2-font-size);
-	font-family: "Montserrat", sans-serif;
-	color: #dddddd;
+	color: var(--font-color);
 }
 
 .about p {
-	color: #dddddd;
+	color: var(--font-color);
 	font-size: 24px;
 	text-align: center;
 	padding: 0 0 50px 0;
@@ -288,7 +327,6 @@ nav ul li a:hover {
 	grid-column: 1 / span 4;
 	text-align: center;
 	font-size: var(--h2-font-size);
-	font-family: "Montserrat", sans-serif;
 	margin-bottom: 10px;
 	overflow: hidden;
 }
@@ -296,6 +334,7 @@ nav ul li a:hover {
 .skills i {
 	font-size: 5rem;
 	margin-bottom: 10px;
+	color: var(--icon-color);
 }
 
 .skills h4 {
@@ -306,18 +345,16 @@ nav ul li a:hover {
 
 .contact {
 	background: var(--primary-color);
-	color: #dddddd;
+	color: var(--font-color);
 }
 
 .contact h2 {
-	font-family: "montserrat", sans-serif;
 	font-size: var(--h2-font-size);
 	grid-column-start: span 2;
 }
 
-.contact p {
-	font-size: 36px;
-	font-family: "source sans pro", sans-serif;
+.contact h3 {
+	font-size: 1.8rem;
 }
 
 .contact .email {
