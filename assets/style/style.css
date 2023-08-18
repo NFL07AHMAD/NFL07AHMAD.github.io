@@ -249,12 +249,19 @@ nav ul li a:hover {
 	align-items: center;
 }
 
-.header .col:nth-child(2) .shape {
+.header .col:nth-child(2) .clip {
+	height: 50%;
+	display: flex;
+	align-items: end;
+	border-radius: 0 0 100vw 100vw;
+	overflow: hidden;
+}
+
+.header .col:nth-child(2) .clip .shape {
 	width: 368px;
 	height: 368px;
 	border-radius: 100%;
-	background-color: #272829;
-	overflow: hidden;
+	background-color: #747882;
 }
 
 .header .col:nth-child(1) .cursor {
