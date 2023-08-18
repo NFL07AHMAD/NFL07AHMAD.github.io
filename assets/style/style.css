@@ -87,12 +87,13 @@ nav .container {
 	align-items: center;
 	margin: 0 auto;
 	max-width: var(--container-max-width);
+	padding: 0 50px;
 }
 
 nav a {
-	color: #d9d9d9;
 	text-decoration: none;
 	font-size: 1.05rem;
+
 }
 
 nav .logo {
@@ -100,44 +101,56 @@ nav .logo {
 	align-items: center;
 	text-align: center;
 	justify-content: center;
-	font-size: 24px;
-	width: 75px;
-	height: 75px;
-	padding: 5px;
-	transition: 0.2s;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(to top, var(--accent-color), var(--accent-color));
+	background-position: bottom;
+	transition: 0.5s;
+	background-size: 100% 0%;
+	padding: 10px;
+}
+
+nav .logo:hover {
+	background-size: 100% 100%;
+	color: var(--primary-color);
 }
 
 nav .logo svg {
-	width: 80%;
 	color: var(--font-color);
+	width: 50px;
+	transition: 0.2s;
 }
+
+nav .logo:hover svg {
+	color: var(--primary-color);
+}
+
 
 nav ul {
 	display: flex;
 	list-style: none;
 	justify-content: space-between;
-	width: 35%;
 	transition: all 0.5s;
+	max-width: 70%;
 }
 
 nav ul li {
-	margin: 5px;
+	margin: 2px 40px;
 }
 
 nav ul li a {
-	padding: 20px 10px;
+	padding: 10px 10px;
 	display: inline-block;
-	background-size: 100% 0%;
+	background-size: 0% 7%;
 	background-repeat: no-repeat;
-	background-position: left;
 	background-image: linear-gradient(to top, var(--accent-color), var(--accent-color));
 	background-position: bottom;
 	transition: 0.5s;
+	color: var(--font-color);
 }
 
 nav ul li a:hover {
-	background-size: 100% 100%;
-	color: var(--primary-color);
+	background-size: 100% 7%;
+	color: var(--accent-color);
 }
 
 /* Hamburger Menu */
@@ -290,6 +303,7 @@ nav ul li a:hover {
 	max-width: var(--container-max-width);
 }
 
+/* Skills */
 .skills {
 	padding: 50px;
 	display: flex;
@@ -320,6 +334,7 @@ nav ul li a:hover {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin: 10px 40px;
 }
 
 .skills h2 {
@@ -335,10 +350,6 @@ nav ul li a:hover {
 	font-size: 5rem;
 	margin-bottom: 10px;
 	color: var(--icon-color);
-}
-
-.skills h4 {
-	font-size: 1.5rem;
 }
 
 /* Contact */
@@ -401,15 +412,20 @@ nav ul li a:hover {
 	list-style: none;
 	text-align: end;
 	padding: 10px 0 0 0;
+	margin-top: 10px;
+}
+
+.contact ul li {
+	margin: 0px 0px 0px 20px;
 }
 
 .contact ul li a {
 	font-size: 40px;
 	padding: 5px 8px;
 	margin: 0 5px;
-	background-size: 0% 100%;
+	background-size: 100% 0%;
 	background-repeat: no-repeat;
-	background-position: left;
+	background-position: bottom;
 	background-image: linear-gradient(to left, var(--accent-color), var(--accent-color));
 	color: #d9d9d9;
 	transition: 0.5s;

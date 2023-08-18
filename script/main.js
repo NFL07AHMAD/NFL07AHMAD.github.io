@@ -7,12 +7,12 @@ function changeNavStyle() {
   let y = window.scrollY;
   if (y >= 50) {
     document.querySelector('nav').style.height = '80px';
-    document.querySelector('.logo').style.height = '54px';
-    document.querySelector('.logo').style.width = '60px';
+    document.querySelector('nav .logo svg').style.width = '42px';
+    // document.querySelector('.logo svg')[0].style.height = '60px';
   } else {
     document.querySelector('nav').style.height = '100px';
-    document.querySelector('.logo').style.height = '72px';
-    document.querySelector('.logo').style.width = '75px';
+    document.querySelector('nav .logo svg').style.width = '50px';
+    // document.querySelector('.logo svg')[0].style.height = '72px';
   }
 }
 
