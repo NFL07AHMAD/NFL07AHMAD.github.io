@@ -18,7 +18,7 @@ function changeNavStyle() {
 
 //Function for writing animation in Heading
 function typeWriter() {
-  const words = ['Designer', 'Developer', 'Programmer', 'Freelancer'];
+  const words = ['Designer', 'Programmer'];
   let wordIndex = 0,
     charIndex = 0;
 
