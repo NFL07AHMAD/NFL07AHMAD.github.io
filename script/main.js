@@ -1,6 +1,7 @@
-let icon1 = document.querySelectorAll('.contact ul li a')[0];
-let icon2 = document.querySelectorAll('.contact ul li a')[1];
-let icon3 = document.querySelectorAll('.contact ul li a')[2];
+const icon1 = document.querySelectorAll('.contact ul li a')[0];
+const icon2 = document.querySelectorAll('.contact ul li a')[1];
+const icon3 = document.querySelectorAll('.contact ul li a')[2];
+const descText = document.querySelector('.header .col:nth-child(1) > .desc > .scroll')
 
 //Function for changing navbar style when scrolling
 function changeNavStyle() {
@@ -17,45 +18,57 @@ function changeNavStyle() {
 }
 
 //Function for writing animation in Heading
-function typeWriter() {
-  const words = ['Designer', 'Programmer'];
-  let wordIndex = 0,
-    charIndex = 0;
+// function typeWriter() {
+//   const words = ['Designer', 'Programmer'];
+//   let wordIndex = 0,
+//     charIndex = 0;
 
-  function typing() {
-    if (charIndex < words[wordIndex].length) {
-      document.querySelector('.type').textContent +=
-        words[wordIndex].charAt(charIndex);
-      charIndex++;
-      document.querySelector('.cursor').style.animation = 'none';
-      setTimeout(typing, 200);
+//   function typing() {
+//     if (charIndex < words[wordIndex].length) {
+//       document.querySelector('.type').textContent +=
+//         words[wordIndex].charAt(charIndex);
+//       charIndex++;
+//       document.querySelector('.cursor').style.animation = 'none';
+//       setTimeout(typing, 200);
+//     } else {
+//       document.querySelector('.cursor').style.animation =
+//         'cursorBlink 0.8s infinite';
+//       setTimeout(erasing, 2000);
+//     }
+//   }
+
+//   function erasing() {
+//     if (charIndex > 0) {
+//       document.querySelector('.type').textContent = words[wordIndex].substring(
+//         0,
+//         charIndex - 1
+//       );
+//       charIndex--;
+//       document.querySelector('.cursor').style.animation = 'none';
+//       setTimeout(erasing, 100);
+//     } else {
+//       wordIndex++;
+//       if (wordIndex >= words.length) wordIndex = 0;
+//       setTimeout(typing, 200);
+//     }
+//   }
+
+//   typing();
+// }
+
+// typeWriter();
+
+function autoScroll() {
+  setInterval(() => {
+    if (descText.scrollLeft < 214) {
+      descText.scrollBy(5,0)
     } else {
-      document.querySelector('.cursor').style.animation =
-        'cursorBlink 0.8s infinite';
-      setTimeout(erasing, 2000);
+      descText.scrollBy(-5,0)
     }
-  }
-
-  function erasing() {
-    if (charIndex > 0) {
-      document.querySelector('.type').textContent = words[wordIndex].substring(
-        0,
-        charIndex - 1
-      );
-      charIndex--;
-      document.querySelector('.cursor').style.animation = 'none';
-      setTimeout(erasing, 100);
-    } else {
-      wordIndex++;
-      if (wordIndex >= words.length) wordIndex = 0;
-      setTimeout(typing, 200);
-    }
-  }
-
-  typing();
+  }, 3000);
 }
 
-typeWriter();
+autoScroll()
 
 document.addEventListener('scroll', () => {
   changeNavStyle();
@@ -75,7 +88,8 @@ function reveal() {
 
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add('active');
-    } else {
+    }
+    else {
       reveals[i].classList.remove('active');
     }
   }

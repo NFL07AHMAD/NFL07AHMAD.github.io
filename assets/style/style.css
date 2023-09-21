@@ -3,7 +3,7 @@
 	--h2-font-size: 50px;
 	--primary-color: #0a0a10;
 	--secondary-color: #2c363f;
-	--font-color: #d8daed;
+	--font-color: #d4d5de;
 	--icon-color: #c0c2d2;
 	--accent-color: #00c4f0;
 }
@@ -74,6 +74,19 @@ a {
 	font-family: 'Montserrat-Light', sans-serif;
 	color: var(--font-color);
 }
+
+.reveal {
+  position: relative;
+  /* transform: translateY(200px); */
+  /* opacity: 0; */
+  transition: 1s all ease-out;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 
 section > .container:first-child {
 	margin: 0 150px;
@@ -256,15 +269,50 @@ nav ul li a:hover {
 	padding: 10px 0;
 }
 
-.header .col:nth-child(1) p {
+.header .col:nth-child(1) .desc {
 	color: #9b9ca9;
 	padding: 10px 0;
 	font-size: clamp(1.6rem, 0.9vw, 3.8rem);
 	letter-spacing: 4px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
 }
 
-.header .col:nth-child(1) p span {
-	font-family: monospace;
+.header .col:nth-child(1) > .desc > .scroll {
+	scroll-snap-type: x mandatory;
+	display: flex;
+	width: 190px;
+	flex-direction: row;
+	align-items: center;
+	overflow-x: scroll;
+	gap: 50px;
+	scroll-behavior: smooth;
+	padding-bottom: 4px;
+	transform: translateY(4px);
+	/* scrollbar-track-color: var(--accent-color); */
+}
+
+.header .col:nth-child(1) > .desc > .scroll::-webkit-scrollbar {
+	width: 5px;
+	height: 3px;
+}
+
+.header .col:nth-child(1) > .desc > .scroll::-webkit-scrollbar-thumb {
+	background: var(--accent-color);
+	width: 10px;
+}
+
+.header .col:nth-child(1) > .desc > .scroll > div:first-child {
+	scroll-snap-stop: normal;
+	scroll-snap-align: start;
+}
+
+.header .col:nth-child(1) > .desc > .scroll > div:last-child {
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+	padding-right: 80px;
+	scroll-padding-right: -20px;
 }
 
 .header .col:nth-child(2) {
@@ -333,6 +381,10 @@ nav ul li a:hover {
 
 	.header .container .col:nth-child(1) p {
 		text-align: center;
+	}
+
+	.header .col:nth-child(1) > .desc {
+		justify-content: center;
 	}
 }
 
@@ -525,16 +577,4 @@ nav ul li a:hover {
 	/* nav .container {
 		padding: inherit;
 	} */
-}
-
-.reveal {
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: 1s all ease;
-}
-
-.reveal.active {
-  transform: translateY(0);
-  opacity: 1;
 }
