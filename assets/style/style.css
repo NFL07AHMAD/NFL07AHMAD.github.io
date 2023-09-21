@@ -87,6 +87,18 @@ a {
   opacity: 1;
 }
 
+html::-webkit-scrollbar {
+	width: 6px;
+}
+
+html::-webkit-scrollbar-thumb {
+	background: var(--accent-color);
+}
+
+html::-webkit-scrollbar-button {
+	background: var(--secondary-color);
+
+}
 
 section > .container:first-child {
 	margin: 0 150px;
